@@ -12,7 +12,7 @@ def hash_password(password: str) -> str:
 # Verify the password against the hashed version
 def verify_password(plain_password, hashed_password):
     return pwd_context.verify(plain_password, hashed_password)
-# Create a JWT access token for authenticated users
+# Create a JWT access token for authenticated users.
 def create_access_token(data: dict, expires_delta: timedelta = None):
     to_encode = data.copy()
     expire = datetime.utcnow() + (expires_delta or timedelta(minutes=15))
