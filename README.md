@@ -11,21 +11,21 @@ Students can register, enroll in courses, and track progress. Instructors can ma
 - `GET /students/me/courses`: View enrolled courses with progress
 - `POST /students/enroll`: Enroll in a course
 
-### 👨‍🏫 Instructor Endpoints
+### Instructor Endpoints
 - `POST /instructors/register`: Register a new instructor
 - `POST /instructors/login`: Log in as an instructor (returns JWT)
 - `POST /courses`: Create a new course
 - `PATCH /courses/{course_id}`: Edit an existing course
 - `PATCH /courses/{course_id}/progress`: Update a student's progress
 
-## 🧠 Data Model
+## Data Model
 
 - `Student`: name, email, hashed password
 - `Instructor`: name, email, hashed password
 - `Course`: title, description, instructor_id
 - `Enrollment`: course_id, student_id, progress (%)
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 - **Python 3.11+**
 - **FastAPI** – modern web framework
