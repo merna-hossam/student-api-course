@@ -35,4 +35,5 @@ class Enrollment(Base):
     progress = Column(Float, default=0.0)
     student = relationship("Student", back_populates="enrollments")
     course = relationship("Course", back_populates="enrollments")
+    #  student can enroll in a course only once
     __table_args__ = (UniqueConstraint('student_id', 'course_id', name='_student_course_uc'),)
